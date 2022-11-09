@@ -1,0 +1,170 @@
+@import url("https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  font-family: "Karla", sans-serif;
+  font-size: 16px;
+  background: hsl(204deg, 43%, 93%);
+  line-height: 1.5;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+.py-2 {
+  padding: 2rem;
+}
+
+.container {
+  max-width: 650px;
+  margin: 0 auto;
+  background: white;
+  border-radius: 8px;
+}
+
+main {
+  display: grid;
+  grid-auto-columns: 1fr;
+  grid-template-areas: "header header " "subs why " "footer footer ";
+}
+
+#main-header {
+  grid-area: header;
+}
+#main-header h1 {
+  color: hsl(179deg, 62%, 43%);
+  padding: 0.85rem 0;
+  font-weight: 700;
+}
+#main-header h3 {
+  padding: 0.85rem 0;
+  color: hsl(71deg, 73%, 54%);
+}
+#main-header p {
+  color: hsl(218deg, 22%, 67%);
+  font-weight: 400;
+}
+
+#subscription {
+  grid-area: subs;
+  background: hsl(179deg, 62%, 43%);
+}
+#subscription h3 {
+  color: white;
+  padding: 1rem 0;
+}
+#subscription .price-month {
+  display: flex;
+  align-items: center;
+}
+#subscription .price-month .price {
+  font-size: 2rem;
+  color: white;
+  font-weight: 700;
+}
+#subscription .price-month .month {
+  color: hsla(204deg, 43%, 93%, 0.6);
+  margin-left: 10px;
+}
+#subscription .access {
+  color: hsl(204deg, 43%, 93%);
+  margin-bottom: 30px;
+}
+#subscription .btn {
+  width: 250px;
+  padding: 1rem 0;
+  background: hsl(71deg, 73%, 54%);
+  color: white;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 5px;
+  border: none;
+}
+#subscription .btn:hover {
+  cursor: pointer;
+  background: white;
+  color: hsl(179deg, 62%, 43%);
+}
+
+#why-us {
+  grid-area: why;
+  background: hsla(179deg, 62%, 43%, 0.8);
+}
+#why-us h3 {
+  padding: 1rem 0;
+  color: white;
+}
+#why-us ul li {
+  color: hsl(204deg, 43%, 93%);
+  font-size: 0.9rem;
+}
+
+footer {
+  grid-area: footer;
+  text-align: center;
+}
+
+@media (max-width: 380px) {
+  body {
+    display: grid;
+    place-content: center;
+  }
+  .container {
+    max-width: 300px;
+  }
+  main {
+    display: flex;
+    flex-direction: column;
+  }
+  #main-header h1 {
+    font-size: 1.3rem;
+  }
+  #main-header h3 {
+    font-size: 1rem;
+  }
+  #main-header p {
+    font-size: 0.9rem;
+  }
+  #subscription h3 {
+    font-size: 1.3rem;
+  }
+  #subscription .price-month .price {
+    font-size: 1.7rem;
+  }
+  #subscription .price-month .month {
+    font-size: 0.85rem;
+  }
+  #subscription .access {
+    padding: 0.75rem 0;
+    font-size: 0.9rem;
+  }
+  #subscription .btn {
+    padding: 0.85rem 0;
+    font-size: 0.95rem;
+  }
+  #why-us h3 {
+    font-size: 1.3rem;
+  }
+  #why-us ul li {
+    font-size: 0.9rem;
+  }
+  footer {
+    font-size: 0.85rem;
+    text-align: center;
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */

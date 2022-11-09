@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap');
+
+$cyan: hsl(179, 62%, 43%);
+$bright: hsl(71, 73%, 54%);
+$light-gray: hsl(204, 43%, 93%);
+$grayish-blue: hsl(218, 22%, 67%);
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  font-family: 'Karla', sans-serif;
+  font-size: 16px;
+  background: $light-gray;
+  line-height: 1.5;
+
+}
+a{
+  text-decoration: none;
+}
+ul{
+  list-style: none;
+}
+.py-2{
+  padding: 2rem;
+}
+.container{
+  max-width: 650px;
+  margin: 0 auto;
+  background: white;
+  border-radius: 8px;
+}
+main{
+  display: grid;
+  grid-auto-columns: 1fr;
+  grid-template-areas: 
+    'header header '
+    'subs why '
+    'footer footer '
+  ;
+}
+
+#main-header{
+  grid-area: header;
+
+  h1{
+    color: $cyan;
+    padding: 0.85rem 0;
+    font-weight: 700;
+  }
+  h3{
+    padding: 0.85rem 0;
+    color: $bright;
+  }
+  p{
+    color: $grayish-blue;
+    font-weight: 400;
+  }
+
+
+}
+#subscription{
+  
+  grid-area: subs;
+  background: $cyan;
+
+  h3{
+    color: white;
+    padding: 1rem 0;
+  }
+  .price-month{
+    display: flex;
+    align-items: center;
+
+    .price{
+     font-size: 2rem;
+     color: white;
+     font-weight: 700;
+    }
+    .month{
+      color: hsla(204, 43%, 93%, 60%);
+      margin-left: 10px;
+    }
+  }
+  .access{
+    color: $light-gray;
+    margin-bottom: 30px;
+  }
+  .btn{
+    width: 250px;
+    padding: 1rem 0;
+    background: $bright;
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 5px;
+    border: none;
+
+    &:hover{
+      cursor: pointer;
+      background: white;
+      color: $cyan;
+    }
+  }
+}
+#why-us{
+  grid-area: why;
+  background: hsl(179, 62%, 43%, 80%);
+
+  h3{
+    padding: 1rem 0;
+    color: white;
+  }
+  ul{
+    li{
+      color: $light-gray;
+      font-size: 0.90rem;
+    }
+  }
+}
+footer{
+  grid-area: footer;
+  text-align: center;
+}
+
+@import 'mobile';
